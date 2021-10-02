@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class DictionaryCommandline {
-    Dictionary dictionary;
+    public Dictionary dictionary;
     DictionaryCommandline(Dictionary dictionary1) {
         this.dictionary = dictionary1;
     }

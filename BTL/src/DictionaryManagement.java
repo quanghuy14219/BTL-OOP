@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class DictionaryManagement {
-    Dictionary dictionary;
+    public Dictionary dictionary;
 
     DictionaryManagement(Dictionary dictionary1) {
         this.dictionary = dictionary1;
