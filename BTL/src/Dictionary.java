@@ -1,19 +1,23 @@
+import java.util.ArrayList;
+
 public class Dictionary {
-    public Word[] words;
+    public ArrayList<Word> words;
     public int num; // number word of words
     Dictionary() {
-        words = new Word[1000000];
+        words = new ArrayList<>();
         num = 0;
     }
-    Dictionary(Word[] words1) {
-        words = new Word[words1.length];
-        num = words1.length;
-        for(int i=0;i<num;i++) {
-            words[i] = words[i];
-        }
+
+    public Dictionary(ArrayList<Word> words) {
+        this.words = words;
     }
-    void addWord(Word word) {
-        words[num] = word;
+
+    public void addWord(Word word) {
+        words.add(word);
         num++;
+    }
+    public void deleteWorld(Word word) {
+        words.remove(word);
+        num--;
     }
 }
