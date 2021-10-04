@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class DictionaryManagement {
-    private Dictionary dictionary;
+    public Dictionary dictionary;
 
     DictionaryManagement(Dictionary dictionary1) {
         this.dictionary = dictionary1;
@@ -21,7 +21,7 @@ public class DictionaryManagement {
     }
     public void insertFromFile() {
         try {
-            FileReader fr = new FileReader("F:\\BTP-OOP\\chinh\\BTL\\src\\dictionaries");//cách lưu khác nhau;pull về phải đổi
+            FileReader fr = new FileReader(".\\src\\dictionaries.txt");//cách lưu khác nhau;pull về phải đổi
             BufferedReader br = new BufferedReader(fr);
             String line = "";
             while (true) {
@@ -29,11 +29,17 @@ public class DictionaryManagement {
                 if (line == null) {
                     break;
                 }
-                String[] txt = line.split("\\s+");// phân tách chuỗi dụa trên đoạn có nhiều khoảng trắng
+                String[] txt = line.split("\t+");// phân tách chuỗi dụa trên dấu tab, bởi giữa word target và word explain cách nhau dấu tab quy định trong hướng dẫn
                 String word_target = txt[0];
                 String word_explain = txt[1];
-                dictionary.addWord(new Word(word_target, word_explain));
+                System.out.println(word_target+"\t"+word_explain);
+
+//                Word nw = new Word(word_target,word_explain);
+//                this.dictionary.addWord(nw);
+
+                System.out.println("2.7");
                 System.out.println(line);
+                System.out.println("3");
             }
         } catch (Exception e) {
         }
@@ -61,7 +67,7 @@ public class DictionaryManagement {
             int check = 0;
             for (int i = 0; i < dictionary.num; i++) {
                 if (del.equals(dictionary.words.get(i).getWord_explain())) {
-                    dictionary.deleteWorld(dictionary.words.get(i));
+                    dictionary.deleteWord(dictionary.words.get(i));
                 } else {
                     check++;
                 }
