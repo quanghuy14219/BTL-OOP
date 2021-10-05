@@ -1,0 +1,6 @@
+Một số lưu ý để có thể cải tiến (nếu có time):
++) Hàm dictionarySearch không phân biệt in thường in hoa
+	VD: Search for: He
+		result: Hello   chao
+			hell    abcxyz
++) Hàm showAllWords in ra kết quả không bị nồi lõm

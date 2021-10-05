@@ -5,12 +5,13 @@ public class Test {
         Dictionary dictionary = new Dictionary();
         DictionaryManagement dima = new DictionaryManagement(dictionary);
         DictionaryCommandline dico = new DictionaryCommandline(dictionary);
-//        dima.insertFromFile();
-        dima.insertFromCommandline(2);
-        dico.showAllWords();
-//        dico.dictionarySearch("H");
-//        dima.insertDictionary("fix");
-//        dico.showAllWords();
+
+        dico.dictionaryBasic();                     //Done
+        dico.dictionaryAdvanced("Hello");         //Done
+        //dima.modifyDictionary("fix");             //Done
+        //dico.showAllWords();
+        //dico.dictionarySearch("M");               //Done
         dima.dictionaryExportToFile();
+
     }
 }
