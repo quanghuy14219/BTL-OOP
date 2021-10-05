@@ -57,28 +57,58 @@ public class DictionaryManagement {
     /** them tu, xoa tu, sua tu.*/
     public void insertDictionary(String s) { // s là tham số dòng lệnh truyền vào
         Scanner input = new Scanner(System.in);
-        int N = input.nextInt();
         if (s == "insert") {
             System.out.println("Enter the number of words you want to add: ");
+            int N = input.nextInt();
             insertFromCommandline(N);
         } else if (s == "delete") {
             System.out.println("Enter the  word you want to delete: ");
             String del = input.nextLine();
             int check = 0;
             for (int i = 0; i < dictionary.num; i++) {
-                if (del.equals(dictionary.words.get(i).getWord_explain())) {
+                if (del.equals(dictionary.words.get(i).getWord_target())) {
                     dictionary.deleteWord(dictionary.words.get(i));
-                } else {
                     check++;
+                    break;
                 }
             }
-            if (check != 0) {
-                System.out.println("Invalid world! please try again!");
+            if (check == 0) {
+                System.out.println("Invalid word! Please try again!");
             }
         } else if (s == "fix") {
-//            System.out.println("Enter the world you want to fix: ");
-//            String fix = input.nextLine();
-//
+            System.out.println("Enter the word you want to fix: ");
+            String fix = input.nextLine();
+            int check = 0;
+            for (int i = 0; i < dictionary.num; i++) {
+                if (fix.equals(dictionary.words.get(i).getWord_target())) {
+                    System.out.println("Enter the word to fix target");
+                    String b = input.nextLine();
+                    dictionary.words.get(i).setWord_target(String.copyValueOf(b.toCharArray()));
+                    System.out.println("Enter the word to fix explanation");
+                    String c = input.nextLine();
+                    dictionary.words.get(i).setWord_explain(String.copyValueOf(c.toCharArray()));
+                    check++;
+                    break;
+                }
+            }
+            if (check == 0) {
+                System.out.println("Invalid word! Please try again!");
+            }
+        }
+    }
+
+    public void dictionaryExportToFile() throws IOException {
+        BufferedWriter bw = null;
+        try {
+            FileWriter writer = new FileWriter(".\\src\\dictionary.txt");
+            bw = new BufferedWriter(writer);
+            for (int i = 0; i < dictionary.num; i++) {
+                bw.write(dictionary.words.get(i).getWord_target() + "\t" + dictionary.words.get(i).getWord_explain() + "\n");
+            }
+        } finally {
+            if (bw != null) {
+                bw.close();
+            }
         }
     }
 

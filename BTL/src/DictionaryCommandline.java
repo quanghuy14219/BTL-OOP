@@ -30,4 +30,16 @@ public class DictionaryCommandline {
         diman.dictionaryLookup(s);
     }
 
+    public void dictionarySearch(String s) {
+        int check = 0;
+        for (int i = 0; i < dictionary.num; i++) {
+            if (dictionary.words.get(i).getWord_target().indexOf(s) == 0) {
+                System.out.println(dictionary.words.get(i).getWord_target()+"\t"+dictionary.words.get(i).getWord_explain());
+                check++;
+            }
+        }
+        if (check == 0) {
+            System.out.println("Invalid word! Please try again!");
+        }
+    }
 }

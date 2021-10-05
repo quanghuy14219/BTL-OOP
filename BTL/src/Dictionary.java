@@ -4,7 +4,7 @@ public class Dictionary {
     public ArrayList<Word> words;
     public int num; // number word of words
     Dictionary() {
-        //words = new ArrayList<Word>();
+        words = new ArrayList<Word>();
         num = 0;
     }
 
