@@ -12,6 +12,7 @@ public class Test {
         //dico.showAllWords();
         //dico.dictionarySearch("M");               //Done
         dima.dictionaryExportToFile();
+        DictionaryApplication.runApplication();
 
     }
 }
