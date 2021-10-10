@@ -25,7 +25,7 @@ public class DictionaryManagement {
     public void insertFromFile() {
         System.out.println("Insert words from file dictionaries.txt");
         try {
-            FileReader fr = new FileReader(".\\src\\dictionaries.txt");//cách lưu khác nhau;pull về phải đổi
+            FileReader fr = new FileReader(".\\src\\dictionaries.txt");
             BufferedReader br = new BufferedReader(fr);
             String line = "";
             while (true) {

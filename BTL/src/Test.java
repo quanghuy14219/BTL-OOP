@@ -6,13 +6,10 @@ public class Test {
         DictionaryManagement dima = new DictionaryManagement(dictionary);
         DictionaryCommandline dico = new DictionaryCommandline(dictionary);
 
-        dico.dictionaryBasic();                     //Done
-        dico.dictionaryAdvanced("Hello");         //Done
-        //dima.modifyDictionary("fix");             //Done
-        //dico.showAllWords();
-        //dico.dictionarySearch("M");               //Done
-        dima.dictionaryExportToFile();
-        DictionaryApplication.runApplication();
+        dima.insertFromFile();
+        dico.showAllWords();
+        dico.dictionarySearch("h");
+
 
     }
 }

@@ -1,5 +1,13 @@
-Hello	xin chao
-Love	Yeu
-Blankspace	Khoang trong
-Date	Ngay
-Month	Thang
+hello	xin chao
+love	Yeu
+blankspace	Khoang trong
+date	Ngay
+month	Thang
+abcd	fdaasd
+hi	chao cau
+hourse	ngua
+house	ngoi nha
+hour	gio
+hotdog	xuc xich
+h	h
+h	h
