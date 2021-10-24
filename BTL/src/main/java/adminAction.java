@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class adminAction extends JFrame {
     public Dictionary dictionary;
-    JTextField txtIn, txtWorld, txtFixT, txtFixTN, txtFixE;
+    JTextField txtIn, txtWorld, txtFixT, txtFixTN;
     JTextArea txtOut;
     JButton btnX, btnH;
 
@@ -51,15 +51,17 @@ public class adminAction extends JFrame {
     ActionListener eventOut1 = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            String s = txtWorld.getText();
+            String s = txtIn.getText();
             processOut1(s);
         }
     };
     private void processOut1(String s) {
         adminAction ad = new adminAction();
-        Scanner input = new Scanner(System.in);
         if (s.equals("insert")) {
-//            dictionary.addWord();
+            String word_target = txtFixT.getText();
+            String word_explain = txtFixTN.getText();
+            Word newWord = new Word(word_target,word_explain);
+            ad.dictionary.addWord(newWord);
         } else if (s.equals("delete")) {
             int check = 0;
             String ss = txtWorld.getText();
@@ -76,26 +78,25 @@ public class adminAction extends JFrame {
                 txtOut.setText("Successfull, Thank you!!!");
             }
         } else if (s.equals("fix")) {
-            System.out.println("Enter the word you want to fix: ");
-            String fix = input.nextLine();
+            String fix = txtWorld.getText();
             int check = 0;
-            for (int i = 0; i < dictionary.num; i++) {
-                if (fix.equals(dictionary.words.get(i).getWord_target())) {
-                    System.out.println("Enter the new word: ");
-                    String b = input.nextLine();
-                    dictionary.words.get(i).setWord_target(b);
-                    System.out.println("Enter the new word explanation: ");
-                    String c = input.nextLine();
-                    dictionary.words.get(i).setWord_explain(c);
+            for (int i = 0; i < ad.dictionary.num; i++) {
+                if (fix.equals(ad.dictionary.words.get(i).getWord_target())) {
+                    String b = txtFixT.getText();
+                    ad.dictionary.words.get(i).setWord_target(b);
+                    String c = txtFixTN.getText();
+                    ad.dictionary.words.get(i).setWord_explain(c);
                     check++;
                     break;
                 }
             }
             if (check == 0) {
-                System.out.println("Invalid word! Please try again!");
+                txtOut.setText("Invalid word! Please try again!");
+            } else {
+                txtOut.setText("Successfull, Thank you!!!");
             }
         }else{
-            System.out.println("Invalid modify!");
+            txtOut.setText("Invalid modify!");
         }
     }
 
