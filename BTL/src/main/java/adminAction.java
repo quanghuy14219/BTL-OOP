@@ -36,15 +36,15 @@ public class adminAction extends JFrame {
         String s1 = "insert",s2 = "delete", s3 = "fix";
         if (txtIn.getText().equals(s1)) {
             txtOut.setText("Your action has been recorded by the system !!!"
-                    + "\nYour job now is to enter a word targer and explain it in section 1!!!");
+                    + "\nYour job now is to enter a word targer and explain it if you want to insert in section 2!!!");
         }
         if (txtIn.getText().equals(s2)) {
             txtOut.setText("Your action has been recorded by the system !!!"
-                    + "\nYour job now is to enter a word you want to delete in section 2!!!");
+                    + "\nYour job now is to enter a word you want to delete in section 1!!!");
         }
         if (txtIn.getText().equals(s3)) {
             txtOut.setText("Your action has been recorded by the system !!!"
-                    + "\nYour job now is to enter a word in world target if you want to fix !!!");
+                    + "\nour job now is to enter a word targer and explain it if you want to fix in section 2!!!!");
         }
     }
 
@@ -155,7 +155,7 @@ public class adminAction extends JFrame {
 
         JPanel pnWorld = new JPanel();
         pnWorld.setLayout(new FlowLayout());
-        JLabel lblWorld = new JLabel("1.Enter the world you want to delete" + txtIn.getText() + ":");
+        JLabel lblWorld = new JLabel("1.Enter the world you want to delete, fix" + txtIn.getText() + ":");
         txtWorld = new JTextField(20);
         pnWorld.add(lblWorld);
         pnWorld.add(txtWorld);
@@ -164,7 +164,7 @@ public class adminAction extends JFrame {
         //section2
         JPanel pnWorldFix = new JPanel();
         pnWorldFix.setLayout(new GridLayout(8,1));
-        JLabel lblFix = new JLabel("  2.Enter the world you want to fix" + txtIn.getText() + ":");
+        JLabel lblFix = new JLabel("  2.Enter the new world you want to fix or insert" + txtIn.getText() + ":");
         pnWorldFix.add(lblFix);
         pnLeft2.add(pnWorldFix);
 
@@ -172,19 +172,13 @@ public class adminAction extends JFrame {
         pnWT.setLayout(new FlowLayout());
         JLabel lblWT = new JLabel("Enter the world target:");
         txtFixT = new JTextField(10);
+        JLabel lblWE = new JLabel("Enter the word explanation: ");
         txtFixTN =  new JTextField(10);
         pnWorldFix.add(lblWT);
         pnWorldFix.add(txtFixT);
+        pnWorldFix.add(lblWE);
         pnWorldFix.add(txtFixTN);
         pnLeft2.add(pnWorldFix);
-
-        JPanel pnWE = new JPanel();
-        pnWE.setLayout(new FlowLayout());
-        JLabel lblWE = new JLabel("Enter the new word explanation: ");
-        txtFixE = new JTextField(10);
-        pnWE.add(lblWE);
-        pnWE.add(txtFixE);
-        pnLeft2.add(pnWE);
 
         JPanel pnH = new JPanel();
         pnH.setLayout(new FlowLayout(FlowLayout.CENTER));
