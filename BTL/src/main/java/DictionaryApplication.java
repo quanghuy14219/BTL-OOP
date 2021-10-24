@@ -10,7 +10,6 @@ public class DictionaryApplication extends JFrame {
     DictionaryApplication() {
         this.dictionary = new Dictionary();
         DictionaryManagement dima = new DictionaryManagement(this.dictionary);
-
         dima.insertFromFile();
     }
     DictionaryApplication (Dictionary dictionary1) {
@@ -205,8 +204,6 @@ public class DictionaryApplication extends JFrame {
     public void runApplication() {
         DictionaryApplication app = new DictionaryApplication();
         app.run();
-
-
     }
 
     public static void main(String[] args) {

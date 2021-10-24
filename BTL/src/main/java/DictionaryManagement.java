@@ -60,9 +60,9 @@ public class DictionaryManagement {
     /** them tu, xoa tu, sua tu.*/
     public void modifyDictionary(String s) { // s là tham số dòng lệnh truyền vào
         Scanner input = new Scanner(System.in);
-        if (s == "insert") {
+        if (s.equals("insert")) {
             insertFromCommandline();
-        } else if (s == "delete") {
+        } else if (s.equals("delete")) {
             System.out.println("Enter the  word you want to delete: ");
             String del = input.nextLine();
             int check = 0;
@@ -76,7 +76,7 @@ public class DictionaryManagement {
             if (check == 0) {
                 System.out.println("Invalid word! Please try again!");
             }
-        } else if (s == "fix") {
+        } else if (s.equals("fix")) {
             System.out.println("Enter the word you want to fix: ");
             String fix = input.nextLine();
             int check = 0;
