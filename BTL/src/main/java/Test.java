@@ -19,12 +19,12 @@ public class Test {
 //        Voice voice = vm.getVoice("kevin16");
 //        voice.allocate();
 //        voice.speak(String.valueOf(text));
-//        Menu m = new Menu("dedecd");
-//        m.showWindow();
+        Menu m = new Menu("dedecd");
+        m.showWindow();
 //        admin a = new admin("ưdw");
 //        a.showWindow();
-        adminAction d = new adminAction("d");
-        d.showWindow();
+//        adminAction d = new adminAction("d");
+//        d.showWindow();
 
     }
 }
