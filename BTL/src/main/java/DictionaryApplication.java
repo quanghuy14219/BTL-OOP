@@ -19,7 +19,7 @@ public class DictionaryApplication extends JFrame {
     public void run () {
 
         int w = 1200;
-        int h = 800;
+        int h = 600;
         int h1 = 80;
         int h2 = h - h1;
 

@@ -9,5 +9,3 @@ hourse	ngua
 house	ngoi nha
 hour	gio
 hotdog	xuc xich
-h	h
-h	h

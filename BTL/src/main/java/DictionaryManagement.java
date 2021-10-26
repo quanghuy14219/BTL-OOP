@@ -25,7 +25,7 @@ public class DictionaryManagement {
     public void insertFromFile() {
         System.out.println("Insert words from file dictionaries.txt");
         try {
-            FileReader fr = new FileReader(".\\src\\dictionaries.txt");
+            FileReader fr = new FileReader(".\\src\\main\\java\\dictionaries.txt");
             BufferedReader br = new BufferedReader(fr);
             String line = "";
             while (true) {
@@ -103,7 +103,7 @@ public class DictionaryManagement {
         BufferedWriter bw = null;
         try {
             System.out.println("Export dictionary to file dictionary.txt");
-            FileWriter writer = new FileWriter(".\\src\\dictionary.txt");
+            FileWriter writer = new FileWriter(".\\src\\main\\java\\dictionary.txt");
             bw = new BufferedWriter(writer);
             for (int i = 0; i < dictionary.num; i++) {
                 bw.write(dictionary.words.get(i).getWord_target() + "\t" + dictionary.words.get(i).getWord_explain() + "\n");
