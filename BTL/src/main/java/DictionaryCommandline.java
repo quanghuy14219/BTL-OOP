@@ -1,3 +1,6 @@
+import com.sun.speech.freetts.Voice;
+import com.sun.speech.freetts.VoiceManager;
+
 import java.util.Scanner;
 
 public class DictionaryCommandline {
@@ -38,5 +41,13 @@ public class DictionaryCommandline {
         if (check == 0) {
             System.out.println("Invalid word! Please try again!");
         }
+    }
+    public static void speak(String s) {
+        System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
+        VoiceManager vm = VoiceManager.getInstance();
+        Voice voice = vm.getVoice("kevin16");
+        voice.allocate();
+        //voice.setDurationStretch(1.15f);
+        voice.speak(s);
     }
 }
