@@ -11,7 +11,8 @@ public class adminAction extends JFrame {
     JButton btnX, btnH;
 
    adminAction() {
-       DictionaryManagement dima = new DictionaryManagement(dictionary);
+       this.dictionary = new Dictionary();
+       DictionaryManagement dima = new DictionaryManagement(this.dictionary);
        dima.insertFromFile();
     }
     public  adminAction(String title) {
@@ -62,6 +63,7 @@ public class adminAction extends JFrame {
             String word_explain = txtFixTN.getText();
             Word newWord = new Word(word_target,word_explain);
             ad.dictionary.addWord(newWord);
+            txtOut.setText("Successfull, Thank you!!!");
         } else if (s.equals("delete")) {
             int check = 0;
             String ss = txtWorld.getText();
@@ -156,7 +158,7 @@ public class adminAction extends JFrame {
 
         JPanel pnWorld = new JPanel();
         pnWorld.setLayout(new FlowLayout());
-        JLabel lblWorld = new JLabel("1.Enter the world you want to delete, fix" + txtIn.getText() + ":");
+        JLabel lblWorld = new JLabel("1.Enter the world you want to delete or fix" + txtIn.getText() + ":");
         txtWorld = new JTextField(20);
         pnWorld.add(lblWorld);
         pnWorld.add(txtWorld);
