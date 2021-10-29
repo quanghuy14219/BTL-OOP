@@ -26,10 +26,11 @@ public class DictionaryApplication extends JFrame {
 
 
         this.setTitle("Dictionary English - Vietnamese");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(w, h);
         this.setLayout(null);
         this.getContentPane().setBackground(Color.BLACK);
+        this.setLocationRelativeTo(null);
 
 
 
