@@ -8,17 +8,19 @@ import static java.awt.SystemColor.text;
 public class Test {
     public static void main(String[] args) throws IOException {
 
-        /*
-        Dictionary dictionary = new Dictionary();
-        DictionaryManagement dima = new DictionaryManagement(dictionary);
-        DictionaryCommandline dico = new DictionaryCommandline(dictionary);
+//        Dictionary dictionary = new Dictionary();
+//        DictionaryManagement dima = new DictionaryManagement(dictionary);
+//        DictionaryCommandline dico = new DictionaryCommandline(dictionary);
+//
+//        dima.insertFromFile();
+//        Word a = new Word("hello", "xin chao");
+//        dictionary.addWord(a);
+//        dima.modifyDictionary("fix");
+//        dima.dictionaryExportToFile();
+//        dico.showAllWords();
+//        dico.dictionarySearch("h");
+//        dico.speak("bla bla blah blah bla bla blah blah bla bla blah blah bla bla blah blah ");
 
-        dima.insertFromFile();
-        dico.showAllWords();
-        dico.dictionarySearch("h");
-        dico.speak("bla bla blah blah bla bla blah blah bla bla blah blah bla bla blah blah ");
-
-         */
 
 
 
