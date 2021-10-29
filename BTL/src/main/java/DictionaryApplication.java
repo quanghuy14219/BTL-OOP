@@ -209,10 +209,6 @@ public class DictionaryApplication extends JFrame {
 
 
 
-
-
-
-
         labelthird2.add(buttonListen);
         labelthird.add(labelthird1);
         labelthird.add(labelthird2);

@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class adminAction extends JFrame {
@@ -54,14 +53,10 @@ public class adminAction extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             String s = txtIn.getText();
-            try {
-                processOut1(s);
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
+            processOut1(s);
         }
     };
-    private void processOut1(String s) throws IOException {
+    private void processOut1(String s) {
         adminAction ad = new adminAction();
         if (s.equals("insert")) {
             String word_target = txtFixT.getText();
@@ -105,8 +100,6 @@ public class adminAction extends JFrame {
         }else{
             txtOut.setText("Invalid modify!");
         }
-        DictionaryManagement dima = new DictionaryManagement(ad.dictionary);
-        dima.dictionaryExportToFile();
     }
 
 
