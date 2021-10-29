@@ -25,7 +25,7 @@ public class DictionaryManagement {
     public void insertFromFile() {
         System.out.println("Insert words from file dictionaries.txt");
         try {
-            FileReader fr = new FileReader(".\\src\\main\\java\\dictionaries.txt");
+            FileReader fr = new FileReader(".\\src\\main\\java\\dictionary.txt");
             BufferedReader br = new BufferedReader(fr);
             String line = "";
             while (true) {
