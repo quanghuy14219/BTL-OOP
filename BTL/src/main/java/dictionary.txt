@@ -1,9 +1,30 @@
-asfd	fasdf
-fas	fasdf
-gas	afsf
-Hello	xin chao
-Love	Yeu
-Blankspace	Khoang trong
-Date	Ngay
-Month	Thang
-h   h
+i	toi
+love	yeu
+you	ban
+apple	qua tao
+banana	qua chuoi
+crush	nguoi ban thich
+daddy	bo, cha
+easy	de dang
+fly	bay
+game	tro choi
+hat	cai mu
+ideal	ly tuong
+japan	Nhat Ban
+kite	cai dieu
+life	cuoc song
+map	ban do
+noise	yen lang
+option	lua chon
+piece	mau, manh nho
+quick	nhanh
+rat	chuot
+study	hoc
+three	so ba
+unique	doc nhat
+violet	mau tim
+world	the gioi
+xaxis	truc hoanh
+yellow	màu vàng
+zoo	so thu
+hello	xin chao
