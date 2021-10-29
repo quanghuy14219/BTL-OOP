@@ -193,7 +193,7 @@ public class DictionaryApplication extends JFrame {
             // Explain in Vietnamese
         JLabel labelthird3 = new JLabel();
         labelthird3.setForeground(Color.BLACK);
-        labelthird3.setFont(new Font("Georgia", Font.ITALIC, 25));
+        labelthird3.setFont(new Font("", Font.ITALIC, 25));
         labelthird3.setBounds(0, 90, w * 2 / 3, h2-90);
         labelthird3.setLayout(null);
         Border borderthird3 = BorderFactory.createLineBorder(Color.BLACK);
@@ -203,11 +203,6 @@ public class DictionaryApplication extends JFrame {
         //labelthird3.setText("huy");
         labelthird3.setHorizontalAlignment(JLabel.LEFT);
         labelthird3.setVerticalAlignment(JLabel.TOP);
-
-
-
-
-
 
         labelthird2.add(buttonListen);
         labelthird.add(labelthird1);

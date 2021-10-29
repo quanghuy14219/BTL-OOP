@@ -33,7 +33,7 @@ public class DictionaryManagement {
                 if (line == null) {
                     break;
                 }
-                String[] txt = line.split("\t+");// phân tách chuỗi dụa trên dấu tab, bởi giữa word target và word explain cách nhau dấu tab quy định trong hướng dẫn
+                String[] txt = line.split("###*");// phân tách chuỗi dụa trên dấu tab, bởi giữa word target và word explain cách nhau dấu tab quy định trong hướng dẫn
                 String word_target = txt[0];
                 String word_explain = txt[1];
                 Word nw = new Word(word_target,word_explain);

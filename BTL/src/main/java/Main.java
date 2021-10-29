@@ -14,7 +14,6 @@ public class Main {
             switch (choose){
                 case 1:
 
-
                     break;
                 case 2:
 
