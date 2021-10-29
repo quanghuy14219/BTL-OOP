@@ -208,7 +208,7 @@ public class adminAction extends JFrame {
 
     public void showWindow(){
         this.setSize(800, 700);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);//dong
+//        this.setDefaultCloseOperation(EXIT_ON_CLOSE);//dong
         this.setState(MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
         this.setVisible(true);

@@ -22,11 +22,9 @@ public class Test {
 
 
 
-        /*
         Menu m = new Menu("dedecd");
         m.showWindow();
 
-         */
 
 
         /*

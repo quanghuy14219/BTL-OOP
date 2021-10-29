@@ -87,7 +87,7 @@ public class admin extends JFrame {
 
     public void showWindow(){
         this.setSize(400, 300);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);//dong
+//        this.setDefaultCloseOperation(EXIT_ON_CLOSE);//dong
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
