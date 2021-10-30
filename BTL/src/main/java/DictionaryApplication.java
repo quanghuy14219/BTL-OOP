@@ -26,8 +26,8 @@ public class DictionaryApplication extends JFrame {
 
 
         this.setTitle("Dictionary English - Vietnamese");
-//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(w, h);
+        this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        this.setSize(w+15, h+40);
         this.setLayout(null);
         this.getContentPane().setBackground(Color.BLACK);
         this.setLocationRelativeTo(null);
@@ -191,23 +191,44 @@ public class DictionaryApplication extends JFrame {
         buttonListen.setBorder(borderListen);
 
             // Explain in Vietnamese
+        JPanel panelthird = new JPanel();
+        panelthird.setBounds(0, 90, w * 2 / 3, h2-90);
+        panelthird.setBackground(Color.LIGHT_GRAY);
+        panelthird.setLayout(null);
+        /*
+            // label
         JLabel labelthird3 = new JLabel();
         labelthird3.setForeground(Color.BLACK);
         labelthird3.setFont(new Font("", Font.ITALIC, 25));
-        labelthird3.setBounds(0, 90, w * 2 / 3, h2-90);
+        labelthird3.setBounds(0, 0, w * 2 / 3, h2-90);
         labelthird3.setLayout(null);
         Border borderthird3 = BorderFactory.createLineBorder(Color.BLACK);
         labelthird3.setBorder(borderthird3);
         labelthird3.setBackground(Color.LIGHT_GRAY);
         labelthird3.setOpaque(true);
-        //labelthird3.setText("huy");
         labelthird3.setHorizontalAlignment(JLabel.LEFT);
         labelthird3.setVerticalAlignment(JLabel.TOP);
 
+         */
+            // text Vietnamese
+        JTextArea textArea = new JTextArea();
+        textArea.setForeground(Color.BLACK);
+        textArea.setFont(new Font("", Font.ITALIC, 25));
+        textArea.setBounds(0, 0, w * 2 / 3, h2-90);
+        textArea.setLayout(null);
+        textArea.setBackground(Color.LIGHT_GRAY);
+        textArea.setOpaque(true);
+        textArea.setLineWrap(true);
+
+            // Scroll
+        JScrollPane explainPane = new JScrollPane(textArea);
+        explainPane.setBounds(0, 0, w * 2 / 3, h2-90);
+
+        panelthird.add(explainPane);
         labelthird2.add(buttonListen);
         labelthird.add(labelthird1);
         labelthird.add(labelthird2);
-        labelthird.add(labelthird3);
+        labelthird.add(panelthird);
         /* Event **/
 
                 // buttonSubmit
@@ -247,7 +268,7 @@ public class DictionaryApplication extends JFrame {
                         break;
                     }
                 }
-                labelthird3.setText(vdata);
+                textArea.setText(vdata);
             }
 
         });

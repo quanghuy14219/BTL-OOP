@@ -25,7 +25,7 @@ public class DictionaryManagement {
     public void insertFromFile() {
         System.out.println("Insert words from file dictionaries.txt");
         try {
-            FileReader fr = new FileReader(".\\src\\main\\java\\dictionary.txt");
+            FileReader fr = new FileReader(".\\src\\main\\java\\dictionaries.txt");
             BufferedReader br = new BufferedReader(fr);
             String line = "";
             while (true) {
@@ -33,7 +33,7 @@ public class DictionaryManagement {
                 if (line == null) {
                     break;
                 }
-                String[] txt = line.split("###*");// phân tách chuỗi dụa trên dấu tab, bởi giữa word target và word explain cách nhau dấu tab quy định trong hướng dẫn
+                String[] txt = line.split("##");// phân tách chuỗi dụa trên dấu ##
                 String word_target = txt[0];
                 String word_explain = txt[1];
                 Word nw = new Word(word_target,word_explain);
@@ -106,7 +106,7 @@ public class DictionaryManagement {
             FileWriter writer = new FileWriter(".\\src\\main\\java\\dictionary.txt");
             bw = new BufferedWriter(writer);
             for (int i = 0; i < dictionary.num; i++) {
-                bw.write(dictionary.words.get(i).getWord_target() + "\t" + dictionary.words.get(i).getWord_explain() + "\n");
+                bw.write(dictionary.words.get(i).getWord_target() + "##" + dictionary.words.get(i).getWord_explain() + "\n");
             }
         } finally {
             if (bw != null) {
